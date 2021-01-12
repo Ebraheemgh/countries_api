@@ -3,6 +3,7 @@ const bodyDiv = document.getElementById("bodyDiv");
 document.querySelector("form").addEventListener('submit', event => {
     event.preventDefault();
     const search = event.target.elements.searcInput.value;
+    //const search = document.querySelector("#search").value;
     fetch(`https://restcountries.eu/rest/v2/name/${search}`)
         .then(response => {
             if (!response.ok) throw new Error(response.status);
@@ -12,6 +13,8 @@ document.querySelector("form").addEventListener('submit', event => {
             bodyDiv.innerHTML = "";
             json.map((data) => {
                 const { name, flag } = data;
+                // const name= data.name;
+                // const flag= data.flag;
                 Cdiv = document.createElement("div");
                 img = document.createElement("img");
                 cName = document.createElement("label");
