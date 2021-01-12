@@ -3,6 +3,7 @@ const bodyDiv = document.getElementById("bodyDiv");
 document.querySelector("form").addEventListener('submit', event => {
     event.preventDefault();
     const search = event.target.elements.searcInput.value;
+    //const search = document.querySelector("#search").value;
     fetch(`https://restcountries.eu/rest/v2/name/${search}`)
         .then(response => {
             if (!response.ok) throw new Error(response.status);
