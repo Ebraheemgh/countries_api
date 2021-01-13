@@ -1,3 +1,4 @@
+
 const bodyDiv = document.getElementById("bodyDiv");
 
 document.querySelector("form").addEventListener('submit', event => {
@@ -12,12 +13,14 @@ document.querySelector("form").addEventListener('submit', event => {
         .then(json => {
             bodyDiv.innerHTML = "";
             json.map((data) => {
-                const { name, flag } = data;
-                //const name=data.name;
-                //const flag=data.flag;
-                let Cdiv = document.createElement("div");
-                let img = document.createElement("img");
-                let cName = document.createElement("label");
+
+                const { name, flag } = data; //data is every each index in the array
+                // const name= data.name;
+                // const flag= data.flag;
+                Cdiv = document.createElement("div");
+                img = document.createElement("img");
+                cName = document.createElement("label");
+
 
                 img.src = flag;
                 cName.textContent = name;
@@ -31,6 +34,7 @@ document.querySelector("form").addEventListener('submit', event => {
                             return r.json();
                         })
                         .then(country => {
+
                             // console.log("name", country[0].name);
                             document.getElementById("name").textContent = ": " + country[0].name;
 
