@@ -19,12 +19,25 @@
     height: 150px;
 }
 
+#countryBody {
+    display: flex;
+    flex-direction: row;
+    font-size: 60px;
+}
+
+#countryBody div div {
+    padding: 20px;
+}
+
+#countryBody div img {
+    width: 250px;
+}
+
 h1 {
     width: 100%;
     display: flex;
     align-self: center;
 }
-
 body{
     background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg");
 }
