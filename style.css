@@ -35,7 +35,7 @@
         }
         
         #countryBody div img {
-            width: 250px;
+            width: 300px;
         }
         
         h1 {
@@ -64,9 +64,10 @@
         }
         
         input[type=text] {
+            display: flex;
+            align-self: center;
             width: 400px;
             height: 40px;
-            margin: auto;
             box-sizing: border-box;
             border: 2px solid rgb(0, 55, 110);
             border-radius: 4px;
@@ -94,6 +95,7 @@
         @media only screen and (max-width: 600px) {
             input[type=text] {
                 width: 300px;
+                margin: auto;
             }
             h1 {
                 font-size: 35px;
@@ -108,5 +110,8 @@
             }
             .countryDiv {
                 width: 35%;
+            }
+            #countryBody div img {
+                width: 98%;
             }
         }
