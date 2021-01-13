@@ -1,17 +1,18 @@
 
 const bodyDiv = document.getElementById("bodyDiv");
+const countryDiv = document.getElementById("countryBody");
 
-document.querySelector("form").addEventListener('submit', event => {
+document.getElementById("search").addEventListener('keyup', event => {
     event.preventDefault();
-    const search = event.target.elements.searcInput.value;
-    //const search = document.querySelector("#search").value;
+    bodyDiv.innerHTML = "";
+    //const search = event.target.elements.searcInput.value;
+    const search = document.querySelector("#search").value;
     fetch(`https://restcountries.eu/rest/v2/name/${search}`)
         .then(response => {
             if (!response.ok) throw new Error(response.status);
             return response.json();
         })
         .then(json => {
-            bodyDiv.innerHTML = "";
             json.map((data) => {
 
                 const { name, flag } = data; //data is every each index in the array
@@ -34,7 +35,8 @@ document.querySelector("form").addEventListener('submit', event => {
                             return r.json();
                         })
                         .then(country => {
-
+                            // bodyDiv.classList.add("hide");
+                            // countryDiv.classList.remove("hide");
                             // console.log("name", country[0].name);
                             document.getElementById("name").textContent = ": " + country[0].name;
 
@@ -50,13 +52,24 @@ document.querySelector("form").addEventListener('submit', event => {
                             //  console.log("currency", country[0].currencies[0].name);
                             document.getElementById("curruncy").textContent = ": " + country[0].currencies[0].name;
                             document.getElementById("cflag").src = flag;
-
+                            bodyDiv.classList.add("hide");
+                            countryDiv.classList.remove("hide");
                         })
                 })
                 bodyDiv.appendChild(Cdiv);
             })
         })
         .catch(error => {
-            if (error.message === "404") { console.log("notFound"); }
+            if (error.message === "404") {
+                const lab = document.createElement("label");
+                lab.textContent = "country not found";
+                lab.classList.add("lab");
+                bodyDiv.appendChild(lab);
+            }
         })
+})
+
+document.getElementById("backButton").addEventListener("click", event => {
+    bodyDiv.classList.remove("hide");
+    countryDiv.classList.add("hide");
 })
