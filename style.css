@@ -1,88 +1,112 @@
-.bodyDiv {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 15px;
-    font-family: 'Aharoni';
-    color: beige;
-}
-
-.countryDiv {
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-    border: rgb(255, 255, 255) solid 3px;
-    padding: 7px;
-}
-
-.countryDiv img {
-    width: 200px;
-    height: 150px;
-}
-
-#countryBody {
-    display: none;
-    flex-direction: row;
-    font-size: 60px;
-    color: rgb(253, 254, 255);
-    font-weight: 800;
-    font-family: 'aharoni'
-}
-
-#countryBody div div {
-    padding: 20px;
-}
-
-#countryBody div img {
-    width: 250px;
-}
-
-h1 {
-    width: 100%;
-    font-size: 90px;
-    font-weight: bold;
-    font-family: 'Aharoni';
-    color: rgb(251, 254, 255);
-    display: flex;
-    align-self: center;
-    justify-content: center;
-}
-
-HTML {
-    background: rgb(23, 23, 27);
-    background: linear-gradient(90deg, rgba(23, 23, 27, 1) 0%, rgba(8, 8, 35, 1) 52%, rgba(9, 59, 69, 1) 100%);
-}
-
-.lab {
-    font-size: 40px;
-    color: darkgray;
-}
-
-.hide {
-    display: none;
-}
-
-input[type=text] {
-    width: 200%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid rgb(0, 55, 110);
-    border-radius: 4px;
-}
-
-#backButton {
-    background-color: #677070;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-#searchDiv {
-    display: flex;
-    justify-content: center;
-}
+        .bodyDiv {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 15px;
+            font-family: 'Aharoni';
+            color: beige;
+        }
+        
+        .countryDiv {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            border: rgb(255, 255, 255) solid 3px;
+            padding: 7px;
+            width: 25%;
+        }
+        
+        .countryDiv img {
+            width: 100%;
+        }
+        
+        #countryBody {
+            display: none;
+            flex-direction: row;
+            font-size: 60px;
+            color: rgb(253, 254, 255);
+            font-weight: 800;
+            font-family: 'aharoni'
+        }
+        
+        #countryBody div div {
+            padding: 20px;
+        }
+        
+        #countryBody div img {
+            width: 250px;
+        }
+        
+        h1 {
+            width: 100%;
+            font-size: 90px;
+            font-weight: bold;
+            font-family: 'Aharoni';
+            color: rgb(251, 254, 255);
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+        
+        HTML {
+            background: rgb(23, 23, 27);
+            background: linear-gradient(90deg, rgba(23, 23, 27, 1) 0%, rgba(8, 8, 35, 1) 52%, rgba(9, 59, 69, 1) 100%);
+        }
+        
+        .lab {
+            font-size: 40px;
+            color: darkgray;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        input[type=text] {
+            width: 400px;
+            height: 40px;
+            margin: auto;
+            box-sizing: border-box;
+            border: 2px solid rgb(0, 55, 110);
+            border-radius: 4px;
+            color: rgb(0, 55, 110);
+            font-size: 30px;
+        }
+        
+        form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        #backButton {
+            display: none;
+            background-color: #677070;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            input[type=text] {
+                width: 300px;
+            }
+            h1 {
+                font-size: 35px;
+            }
+            .countryBody div label {
+                font-size: 25px;
+            }
+            .countryBody {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .countryDiv {
+                width: 35%;
+            }
+        }

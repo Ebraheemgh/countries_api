@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Countries</title>
 </head>
 
 <body>
     <h1>Countries Information</h1>
-    <div id="searchDiv" class=" searchDiv">
-        <form>
-            <input type="text" placeholder="Type the country Name" name="searcInput" id="search">
-        </form>
 
-    </div>
+    <form>
+        <input type="text" placeholder="Type the country Name" name="searcInput" id="search">
+    </form>
+
+
 
     <div id="bodyDiv" class="bodyDiv">
 
@@ -27,14 +28,16 @@
             <div><label>population</label><label id="population"></label></div>
             <div><label>region</label><label id="region"></label></div>
             <div><label>currency</label><label id="curruncy"></label></div>
-            <div><button id="backButton">Back</button></div>
+
         </div>
 
-        <div><img id="cflag"> </div>
+        <div>
+            <img id="cflag">
+        </div>
 
     </div>
 
-    </div>
+    <div><button id="backButton">Back</button></div>
 
     <script src="app.js"></script>
 </body>

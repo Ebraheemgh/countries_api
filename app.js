@@ -54,7 +54,8 @@ document.getElementById("search").addEventListener('keyup', event => {
                             document.getElementById("cflag").src = flag;
                             bodyDiv.style.display = "none";
                             countryDiv.style.display = "flex";
-                        })
+                            document.getElementById("backButton").style.display = "inline";
+                        });
                 })
                 bodyDiv.appendChild(Cdiv);
             })
@@ -73,4 +74,5 @@ document.getElementById("search").addEventListener('keyup', event => {
 document.getElementById("backButton").addEventListener("click", event => {
     bodyDiv.style.display = "flex";
     countryDiv.style.display = "none";
+    document.getElementById("backButton").style.display = "none";
 })
