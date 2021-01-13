@@ -13,12 +13,14 @@ document.querySelector("form").addEventListener('submit', event => {
         .then(json => {
             bodyDiv.innerHTML = "";
             json.map((data) => {
+
                 const { name, flag } = data; //data is every each index in the array
                 // const name= data.name;
                 // const flag= data.flag;
                 Cdiv = document.createElement("div");
                 img = document.createElement("img");
                 cName = document.createElement("label");
+
 
                 img.src = flag;
                 cName.textContent = name;
@@ -32,20 +34,21 @@ document.querySelector("form").addEventListener('submit', event => {
                             return r.json();
                         })
                         .then(country => {
-                            //console.log("name", country[0].name);
-                            document.getElementById("name").textContent =  country[0].name;
 
-                            //console.log("capital", country[0].capital)
-                            document.getElementById("capital").textContent =  country[0].capital;
+                            // console.log("name", country[0].name);
+                            document.getElementById("name").textContent = ": " + country[0].name;
 
-                            //console.log("population", country[0].population);
-                            document.getElementById("population").textContent =  country[0].population;
+                            // console.log("capital", country[0].capital)
+                            document.getElementById("capital").textContent = ": " + country[0].capital;
 
-                           // console.log("region", country[0].region);
-                            document.getElementById("region").textContent =  country[0].region;
+                            // console.log("population", country[0].population);
+                            document.getElementById("population").textContent = ": " + country[0].population;
 
-                            //console.log("currency", country[0].currencies[0].name);
-                            document.getElementById("curruncy").textContent =  country[0].currencies[0].name;
+                            // console.log("region", country[0].region);
+                            document.getElementById("region").textContent = ": " + country[0].region;
+
+                            //  console.log("currency", country[0].currencies[0].name);
+                            document.getElementById("curruncy").textContent = ": " + country[0].currencies[0].name;
                             document.getElementById("cflag").src = flag;
 
                         })
