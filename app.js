@@ -11,8 +11,9 @@ document.getElementById("search").addEventListener('keyup', event => {
             return response.json();
         })
         .then(json => {
+            bodyDiv.innerHTML = "";
+
             json.map((data) => {
-                bodyDiv.innerHTML = "";
 
                 const { name, flag } = data; //data is every each index in the array
                 // const name= data.name;
