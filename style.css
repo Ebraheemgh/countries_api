@@ -49,12 +49,9 @@ h1 {
     justify-content: center;
 }
 
-body {
-    background-image: url("https://wallpaperaccess.com/full/1808238.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+HTML {
+    background: rgb(23, 23, 27);
+    background: linear-gradient(90deg, rgba(23, 23, 27, 1) 0%, rgba(8, 8, 35, 1) 52%, rgba(9, 59, 69, 1) 100%);
 }
 
 .lab {
