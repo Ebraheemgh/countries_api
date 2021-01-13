@@ -114,4 +114,7 @@
             #countryBody div img {
                 width: 98%;
             }
+            #countryBody div div {
+                padding: 0px;
+            }
         }
