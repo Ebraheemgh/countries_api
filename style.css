@@ -4,13 +4,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 15px;
+    font-family: 'Aharoni';
+    color: beige;
 }
 
 .countryDiv {
     display: flex;
     flex-direction: column;
     margin: 15px;
-    border: blue solid 3px;
+    border: rgb(255, 255, 255) solid 3px;
     padding: 7px;
 }
 
@@ -23,6 +25,9 @@
     display: flex;
     flex-direction: row;
     font-size: 60px;
+    color: rgb(253, 254, 255);
+    font-weight: 800;
+    font-family: 'aharoni'
 }
 
 #countryBody div div {
@@ -35,18 +40,52 @@
 
 h1 {
     width: 100%;
+    font-size: 90px;
+    font-weight: bold;
+    font-family: 'Aharoni';
+    color: rgb(251, 254, 255);
     display: flex;
     align-self: center;
-}
-body{
-    background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg");
+    justify-content: center;
 }
 
-.lab{
-font-size: 40px;
-color: darkgray;
+body {
+    background-image: url("https://i.pinimg.com/originals/d7/c9/04/d7c904f5ffee770a6c6105d2aa56a8f2.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.hide{
+.lab {
+    font-size: 40px;
+    color: darkgray;
+}
+
+.hide {
     display: none;
+}
+
+input[type=text] {
+    width: 200%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 55, 110);
+    border-radius: 4px;
+}
+
+#backButton {
+    background-color: #677070;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#searchDiv {
+    display: flex;
+    justify-content: center;
 }

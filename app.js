@@ -1,10 +1,8 @@
-
 const bodyDiv = document.getElementById("bodyDiv");
 const countryDiv = document.getElementById("countryBody");
 
 document.getElementById("search").addEventListener('keyup', event => {
     event.preventDefault();
-    bodyDiv.innerHTML = "";
     //const search = event.target.elements.searcInput.value;
     const search = document.querySelector("#search").value;
     fetch(`https://restcountries.eu/rest/v2/name/${search}`)
@@ -14,6 +12,7 @@ document.getElementById("search").addEventListener('keyup', event => {
         })
         .then(json => {
             json.map((data) => {
+                bodyDiv.innerHTML = "";
 
                 const { name, flag } = data; //data is every each index in the array
                 // const name= data.name;
@@ -35,6 +34,7 @@ document.getElementById("search").addEventListener('keyup', event => {
                             return r.json();
                         })
                         .then(country => {
+
                             // bodyDiv.classList.add("hide");
                             // countryDiv.classList.remove("hide");
                             // console.log("name", country[0].name);
@@ -61,6 +61,7 @@ document.getElementById("search").addEventListener('keyup', event => {
         })
         .catch(error => {
             if (error.message === "404") {
+                bodyDiv.innerHTML = "";
                 const lab = document.createElement("label");
                 lab.textContent = "country not found";
                 lab.classList.add("lab");
