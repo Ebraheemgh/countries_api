@@ -35,8 +35,7 @@ document.getElementById("search").addEventListener('keyup', event => {
                         })
                         .then(country => {
 
-                            // bodyDiv.classList.add("hide");
-                            // countryDiv.classList.remove("hide");
+
                             // console.log("name", country[0].name);
                             document.getElementById("name").textContent = ": " + country[0].name;
 
@@ -52,8 +51,8 @@ document.getElementById("search").addEventListener('keyup', event => {
                             //  console.log("currency", country[0].currencies[0].name);
                             document.getElementById("curruncy").textContent = ": " + country[0].currencies[0].name;
                             document.getElementById("cflag").src = flag;
-                            bodyDiv.classList.add("hide");
-                            countryDiv.classList.remove("hide");
+                            bodyDiv.style.display = "none";
+                            countryDiv.style.display = "flex";
                         })
                 })
                 bodyDiv.appendChild(Cdiv);
@@ -71,6 +70,6 @@ document.getElementById("search").addEventListener('keyup', event => {
 })
 
 document.getElementById("backButton").addEventListener("click", event => {
-    bodyDiv.classList.remove("hide");
-    countryDiv.classList.add("hide");
+    bodyDiv.style.display = "flex";
+    countryDiv.style.display = "none";
 })

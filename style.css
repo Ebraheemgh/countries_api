@@ -22,7 +22,7 @@
 }
 
 #countryBody {
-    display: flex;
+    display: none;
     flex-direction: row;
     font-size: 60px;
     color: rgb(253, 254, 255);
