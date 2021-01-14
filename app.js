@@ -18,9 +18,9 @@ document.getElementById("search").addEventListener('keyup', event => {
                 const { name, flag } = data; //data is every each index in the array
                 // const name= data.name;
                 // const flag= data.flag;
-                Cdiv = document.createElement("div");
-                img = document.createElement("img");
-                cName = document.createElement("label");
+                let Cdiv = document.createElement("div");
+                let img = document.createElement("img");
+                let cName = document.createElement("label");
 
 
                 img.src = flag;
