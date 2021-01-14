@@ -21,13 +21,19 @@
             width: 100%;
         }
         
+        #cFlag {
+            display: flex;
+            align-self: right;
+        }
+        
         #countryBody {
             display: none;
             flex-direction: row;
             font-size: 60px;
             color: rgb(253, 254, 255);
             font-weight: 800;
-            font-family: 'aharoni'
+            font-family: 'aharoni';
+            margin-top: 20px;
         }
         
         #countryBody div div {
